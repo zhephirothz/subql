@@ -1,0 +1,22 @@
+query {
+	councillors(first: 39){
+    nodes{
+      id
+      numberOfVotes
+      voteHistory{
+        nodes{
+          approvedVote
+          votedYes
+          votedNo
+          block
+          proposalHash{
+            account
+            index
+            id
+            voteThreshold
+          }
+        }
+      }
+    }
+  }
+}
